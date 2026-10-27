@@ -20,12 +20,14 @@ const PORT = process.env.PORT || 5000;
 // ==========================================
 // MIDDLEWARE
 // ==========================================
-
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
       "http://127.0.0.1:5173",
+      "https://nanjundeshwara-traders.vercel.app",
+      "https://nanjundeshwara-traders-git-main-shettyhds-projects.vercel.app",
+      "https://nanjundeshwara-traders-gxcldedx8-shettyhds-projects.vercel.app"
     ],
     methods: [
       "GET",
@@ -33,15 +35,14 @@ app.use(
       "PUT",
       "PATCH",
       "DELETE",
-      "OPTIONS",
+      "OPTIONS"
     ],
     allowedHeaders: [
       "Content-Type",
-      "Authorization",
-    ],
+      "Authorization"
+    ]
   })
 );
-
 app.use(express.json({ limit: "1mb" }));
 
 app.use(express.urlencoded({ extended: true }));
