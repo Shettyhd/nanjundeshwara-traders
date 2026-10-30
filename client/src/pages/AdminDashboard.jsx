@@ -4,7 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaSignOutAlt } from "react-icons/fa";
 import "./AdminDashboard.css";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const formatCurrency = (amount) =>
   `₹${Number(amount || 0).toLocaleString("en-IN", {
